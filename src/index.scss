@@ -15,7 +15,6 @@
 USER INPUT PAGE
 ==================
 */
-
 .user-input-container {
   height: 100vh;
   display: flex;
@@ -46,9 +45,6 @@ USER INPUT PAGE
 .user-keyboard {
   height: 30vh;
   width: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +89,6 @@ USER INPUT PAGE
   font-size: 2rem;
   text-align: center;
 }
-
 /*
 ====================
 SHUFFLED SEQUENCE PAGE - Memorization Page
@@ -129,7 +124,6 @@ SHUFFLED SEQUENCE PAGE - Memorization Page
   border: 0.3rem solid black;
   font-size: 3rem;
 }
-
 /*
 ====================
 RESULT PAGE
@@ -149,7 +143,6 @@ RESULT PAGE
   margin-bottom: 3rem;
   font-size: 5rem;
 }
-
 /*
 =====================
 GET READY PAGE
@@ -259,14 +252,12 @@ HOME PAGE
 MOBILE
 ===================
 */
-
 @media only screen and (max-width: 600px) {
   /* 
   =================
   USER INPUT
   =================
   */
-
   .show-input {
     width: 70vw;
     height: 39vh;
@@ -314,7 +305,6 @@ MOBILE
 SHUFFLED SEQUENCE
 =====================
 */
-
   .shuffled-nums {
     width: 80vw;
     display: flex;
@@ -332,7 +322,6 @@ BUTTONS
 ========================
 */
 
-// This selector creates buttons which rotates
 // this button was not created by me
 
 .btn-rotate {
@@ -393,8 +382,6 @@ BUTTONS
     transform: translateY(0) rotateX(0);
   }
 }
-
-// After This Line Everyline is for Legendary button
 // This button design was created by Alex Bodin
 
 .legendary-button {
