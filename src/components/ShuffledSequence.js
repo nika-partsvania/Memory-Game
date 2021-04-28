@@ -4,7 +4,6 @@ const ShuffledSequence = ({ sequence, seconds }) => {
   const [secondsLeft, setSecondsLeft] = useState(seconds);
 
   useEffect(() => {
-    console.log(secondsLeft);
     if (!secondsLeft) return;
 
     const countdown = setInterval(() => setSecondsLeft(secondsLeft - 1), 1000);
