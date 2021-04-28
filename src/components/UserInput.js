@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const UserInput = ({
-  sequence,
+  keyboard,
   handleInput,
   handleSubmit,
   userSequence,
@@ -24,7 +24,7 @@ const UserInput = ({
         )}
       </div>
       <div className="user-keyboard">
-        {sequence.map((num) => (
+        {keyboard.map((num) => (
           <button
             key={num}
             onClick={() => handleInput(num)}
