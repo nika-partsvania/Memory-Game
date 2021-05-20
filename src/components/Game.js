@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import GetReady from "./GetReady";
 import UserInput from "./UserInput";
@@ -33,7 +33,7 @@ const Game = ({ sequence, level }) => {
     setUserKeyboard(userKeyboard.filter((item) => item !== num));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     if (usersChosenSequence.length !== shuffledSequence.length) {
       setErrorNotification(true);
       setTimeout(() => setErrorNotification(false), 2000);
@@ -42,15 +42,15 @@ const Game = ({ sequence, level }) => {
     } else {
       setResult("LOSE");
     }
-  };
+  }, [usersChosenSequence, shuffledSequence]);
 
-  const resetKeyboard = () => {
+  const resetKeyboard = useCallback(() => {
     setUsersChosenSequence([]);
-    setUserKeyboard(sequence);
-  };
+    setUserKeyboard(initialSequence);
+  }, [usersChosenSequence, userKeyboard]);
 
   const undo = () => {
-    if (userKeyboard.length !== sequence.length) {
+    if (userKeyboard.length !== initialSequence.length) {
       const userSeqCopy = [...usersChosenSequence];
       const popped = userSeqCopy.pop();
       setUsersChosenSequence(userSeqCopy);
