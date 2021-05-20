@@ -44,10 +44,10 @@ const Game = ({ sequence, level }) => {
     }
   }, [usersChosenSequence, shuffledSequence]);
 
-  const resetKeyboard = useCallback(() => {
+  const resetKeyboard = () => {
     setUsersChosenSequence([]);
     setUserKeyboard(initialSequence);
-  }, [usersChosenSequence, userKeyboard]);
+  };
 
   const undo = () => {
     if (userKeyboard.length !== initialSequence.length) {
