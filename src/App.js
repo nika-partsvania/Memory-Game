@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Components
-import HomePage from "./components/HomePage";
-import Game from "./components/Game";
+import HomePage from "./pages/Home";
+import Game from "./pages/Game";
 
 // Levels
 import { data } from "./data";
 
 const App = () => {
   const { easy, medium, hard, legendary } = data;
+  const secondsForMemorization = 13;
   return (
     <Router>
       <div className="container">
@@ -17,16 +18,32 @@ const App = () => {
             <HomePage />
           </Route>
           <Route path="/easy">
-            <Game sequence={easy} level="Easy" />
+            <Game
+              sequence={easy}
+              secondsToMemorize={secondsForMemorization}
+              level="Easy"
+            />
           </Route>
           <Route path="/medium">
-            <Game sequence={medium} level="Medium" />
+            <Game
+              sequence={medium}
+              secondsToMemorize={secondsForMemorization}
+              level="Medium"
+            />
           </Route>
           <Route path="/hard">
-            <Game sequence={hard} level="Hard" />
+            <Game
+              sequence={hard}
+              secondsToMemorize={secondsForMemorization}
+              level="Hard"
+            />
           </Route>
           <Route path="/legendary">
-            <Game sequence={legendary} level="Legendary" />
+            <Game
+              sequence={legendary}
+              secondsToMemorize={secondsForMemorization}
+              level="Legendary"
+            />
           </Route>
         </Switch>
       </div>
